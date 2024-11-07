@@ -1,3 +1,7 @@
+/**
+ * https://leetcode.com/problems/minimum-number-of-changes-to-make-binary-string-beautiful/description/
+ */
+
 #include <stdio.h>
 #include <string.h>
 
