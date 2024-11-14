@@ -59,3 +59,9 @@ int main() {
     
     return 0;
 }
+
+/**
+ * What is time complexity?
+ * What is space complexity?
+ * What are some cons? other than one in time complexity worst case scenario?
+ */
