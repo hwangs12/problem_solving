@@ -16,27 +16,37 @@ int threeSumClosest(int* nums, int numsSize, int target) {
     int l = 1;
     // int minDiff = nums[r] - nums[l];
     int sum;
-    // int difference;
+    int closestSum;
+    int difference;
+    int minDiff;
     for (int i = 0; i < numsSize; i++) {
         r = numsSize - 1;
         l = i + 1;
         while (l < r) {
             sum = nums[i] + nums[r] + nums[l];
-            // difference = abs(sum - target);
-            // if (difference < minDiff) {
-            //     minDiff = difference;
-            // }
+            difference = abs(sum - target);
+            
             if (sum < target) {
+                if (difference < minDiff) {
+                    closestSum = sum;
+                    minDiff = difference;
+                }
                 l++;
             } else if (sum > target) {
+                if (difference < minDiff) {
+                    closestSum = sum;
+                    minDiff = difference;
+                }
                 r--;
             } else {
+                closestSum = sum;
+                minDiff = difference;
                 break;
             }
         }
     }
 
-    return sum;
+    return closestSum;
 }
 
 int main()
