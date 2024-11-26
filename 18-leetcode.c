@@ -9,7 +9,7 @@ int compare(const void *a, const void *b) {
     return (*(int *)a - *(int *)b);
 }
 
-int** fourSum(int* nums, int numsSize, int target, int n, int m) {
+int** fourSum(int* nums, int numsSize, int target, int * returnSize, int ** returnColumnSizes) {
     int ** mapleSyrup = malloc(sizeof(int *) * n);
     for (int i = 0; i < m; i++) {
         mapleSyrup[i] = malloc(sizeof(int) * m);
